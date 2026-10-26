@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <button id="btn-toggle-login" class="btn-menu">☰ Menú</button>
+      <h1>Prácticas JavaScript</h1>
+    </div>
+    
+    <div id="login-box" class="login-box hidden">
+      <h3>Iniciar Sesión</h3>
+      <label>Correo Electrónico:</label>
+      <input type="email" placeholder="crisboj5@gmail..com">
+      <label>Contraseña:</label>
+      <input type="password" placeholder="********">
+      <button type="button" onclick="alert('Sesión iniciada')">Entrar</button>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <nav class="sidebar">
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="#votos">1. Votación Secciones</a></li>
+        <li><a href="#suma-pos">2. Suma de Positivos</a></li>
+        <li><a href="#ordenar">3. Ordenar 3 Números</a></li>
+        <li><a href="#impuestos">4. Cálculo Impuestos</a></li>
+        <li><a href="#sueldo">5. Aumento de Sueldo</a></li>
+        <li><a href="#impares">6. Suma Impares</a></li>
+        <li><a href="#asteriscos">7. Asteriscos</a></li>
+        <li><a href="#tablas">8. Tablas Multiplicar</a></li>
+        <li><a href="#arreglos">9. Métodos Arreglos</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <section id="votos" class="card">
+        <h2>1. Votación por Sección</h2>
+        <select id="seccion-select">
+          <option value="norte">Norte</option>
+          <option value="sur">Sur</option>
+          <option value="centro">Centro</option>
+        </select>
+        <button onclick="registrarVoto()">Votar</button>
+        <p id="res-votos">Norte: 0 | Sur: 0 | Centro: 0</p>
+      </section>
+
+      <section id="suma-pos" class="card">
+        <h2>2. Sumar Números Positivos</h2>
+        <button onclick="sumarPositivos()">Iniciar Captura</button>
+        <p id="res-suma-pos">Resultado: -</p>
+      </section>
+
+      <section id="ordenar" class="card">
+        <h2>3. Ordenar 3 Números</h2>
+        <input type="number" id="n1" placeholder="Número 1">
+        <input type="number" id="n2" placeholder="Número 2">
+        <input type="number" id="n3" placeholder="Número 3">
+        <button onclick="ordenarNumeros()">Ordenar</button>
+        <p id="res-orden">Resultado: -</p>
+      </section>
+
+      <section id="impuestos" class="card">
+        <h2>4. Importe Bruto a Neto</h2>
+        <input type="number" id="bruto" placeholder="Importe Bruto">
+        <button onclick="calcularImpuesto()">Calcular</button>
+        <p id="res-impuesto">Resultado: -</p>
+      </section>
+
+      <section id="sueldo" class="card">
+        <h2>5. Aumento de Sueldo (Base 40,000 €)</h2>
+        <input type="number" id="antiguedad" placeholder="Años de antigüedad">
+        <button onclick="calcularSueldo()">Calcular</button>
+        <p id="res-sueldo">Resultado: -</p>
+      </section>
+
+      <section id="impares" class="card">
+        <h2>6. Suma de Impares (1 al 100)</h2>
+        <button onclick="sumarImpares()">Calcular Suma</button>
+        <p id="res-impares">Resultado: -</p>
+      </section>
+
+      <section id="asteriscos" class="card">
+        <h2>7. Imprimir Asteriscos</h2>
+        <input type="number" id="cant-ast" placeholder="Cantidad">
+        <button onclick="mostrarAsteriscos()">Generar</button>
+        <p id="res-asteriscos">Resultado: -</p>
+      </section>
+
+      <section id="tablas" class="card">
+        <h2>8. Tablas de Multiplicar (1 al 10)</h2>
+        <button onclick="generarTablas()">Mostrar Tablas</button>
+        <div id="res-tablas" class="grid-tablas"></div>
+      </section>
+
+      <section id="arreglos" class="card">
+        <h2>9. Funciones de Arreglos (Países)</h2>
+        <p><strong>Arreglo actual:</strong> <span id="arr-paises"></span></p>
+        <div class="flex-wrap">
+          <button onclick="ejPop()">pop()</button>
+          <button onclick="ejShift()">shift()</button>
+          <button onclick="ejPush()">push()</button>
+          <button onclick="ejUnshift()">unshift()</button>
+          <button onclick="ejSplice()">splice()</button>
+          <button onclick="ejDelete()">delete</button>
+          <button onclick="ejReverse()">reverse()</button>
+          <button onclick="ejSort()">sort()</button>
+          <button onclick="ejConcat()">concat()</button>
+          <button onclick="ejJoin()">join()</button>
+          <button onclick="ejLength()">length</button>
+        </div>
+        <p id="res-arreglo">Operación: -</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Autor: Cristo Leonardi Ramirez Banchi</p>
+      <p>Fecha: Octubre 25 de 2026</p>
+      <address>Contacto: <a href="mailto:correo@ejemplo.com">crisbjo5@gmail.com</a></address>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
